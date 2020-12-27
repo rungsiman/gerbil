@@ -7,7 +7,12 @@ GERBIL
 [![BCH compliance](https://bettercodehub.com/edge/badge/AKSW/gerbil)](https://bettercodehub.com/)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/962549badbc74930ad83bf2707c44762)](https://www.codacy.com/app/dice-group/gerbil?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=dice-group/gerbil&amp;utm_campaign=Badge_Grade)
 
-<img style="height: auto; width: auto; max-width: 300px; max-height: 300px;" src="http://139.18.2.164/mroeder/gerbil/gerbil_logo.png">
+This repository and its <b>[Docker image](https://hub.docker.com/r/rungsiman/gerbil)</b> available on Docker Hub are NOT maintained by the GERBIL developer team. We aim to provide an up-to-date and easy-to-use deployment tool for the framework. If you are using GERBIL for your research, please consider citing <b>["GERBIL–Benchmarking Named Entity Recognition and Linking Consistently"](https://dblp.uni-trier.de/rec/html/journals/semweb/RoderUN18)</b> for knowledge extraction and <b>["Benchmarking Question Answering Systems"](https://dblp.uni-trier.de/search?q=Benchmarking%20question%20answering%20systems)</b> for question answering.
+
+To use our Docker image, refer to our <b>[Docker Hub repository](https://hub.docker.com/r/rungsiman/gerbil)</b> for its documentation.
+
+# Official Description
+<i>The original GERBIL repository</i>
 
 ### General Information
 

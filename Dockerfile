@@ -4,14 +4,14 @@
 
 FROM maven:3.6.0-jdk-8 AS build
 
-COPY src /tmp/src/
-COPY repository /tmp/repository/
-COPY pom.xml /tmp/
+COPY src /gerbil/src/
+COPY repository /gerbil/repository/
+COPY pom.xml /gerbil/
 
 # overwrite gerbil-data path: 
-COPY docker-config/* /tmp/src/main/properties/
+COPY docker-config/* /gerbil/src/main/properties/
 
-WORKDIR /tmp/
+WORKDIR /gerbil/
 
 RUN mvn package -U -DskipTests
 
@@ -21,6 +21,6 @@ RUN mvn package -U -DskipTests
 
 FROM tomcat:7-jre8-alpine
 
-RUN touch 20190115.txt
+COPY --from=build /gerbil/target/gerbil-*.war $CATALINA_HOME/webapps/gerbil.war
 
-COPY --from=build /tmp/target/gerbil-*.war $CATALINA_HOME/webapps/$gerbil.war
+CMD catalina.sh run
